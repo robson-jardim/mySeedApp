@@ -13,14 +13,42 @@
         --route=app-shell-path
         --client-project=mySeedApp
 
-3 - Ading PWA capabilities
+3 - Adding PWA capabilities
     ng add @angular/pwa --project mySeedApp
+
+4 - Adding Translation App Capabilities
+        npm install @ngx-translate/core @ngx-translate/http-loader rxjs --save
+        extract translate files: npm run i18n
 
 
 ## Configuring App Shell
 To config App Shell just edit the follow files
 1. HTML Content: src/app/app-shell/app-shell.component.html
 2. CSS Content: src/app/app-shell/app-shell.component.css
+
+
+## Configuring Github
+In terminal go to project folder and then execute the follow commands
+
+Local 
+1. To Init the GitHub: git init
+2. To add the files in your new local repository: git add .
+3. To commit the files that you've staged in your local repository: git commit -m "First commit"
+
+Remote
+1. Go to with and create a public repository with no README.md file
+2. git remote add origin remote repository URL
+        git remote add origin https://github.com/robson-jardim/mySeedApp.git
+3. Pushes the changes in your local repository up to the remote repository you specified as the origin
+        git push -u origin master
+
+
+## Project Commands
+1. Build Dev App: ng build
+2. Serve Dev App localy: ng serve
+3. Build Prod App in "dist"folder: ng build --prod 
+4. Serve Prod App localy: ng serve --prod
+5. Generate Shell App: ng run mySeedApp:app-shell
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
