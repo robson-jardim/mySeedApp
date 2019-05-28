@@ -1,13 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
-    {{'core.AppName' | translate}}
+    Welcome to {{'core.AppName' | translate}}
   </h1>
 </div>
 <div style="text-align:center">
-  <a (click)="useLanguage('en')">English!</a>
-  <a (click)="useLanguage('pt-BR')">Português!</a>
+  <button (click)="useLanguage('en')">English!</button>
+  <button (click)="useLanguage('pt-BR')">Português!</button>
 </div>
 
 <router-outlet></router-outlet>
