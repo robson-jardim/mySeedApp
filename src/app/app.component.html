@@ -1,9 +1,17 @@
-<!--The content below is only a placeholder and can be replaced.-->
+
 <div style="text-align:center">
+  
+  <nav>
+    <a routerLink="login">Entrar</a> | 
+    <a routerLink="register-user">Novo usuário</a> | 
+    <a routerLink="user-profile">Perfil</a>
+  </nav>
+
   <h1>
-    Welcome to {{'core.AppName' | translate}}
+    {{'core.AppName' | translate}}
   </h1>
 </div>
+
 <div style="text-align:center">
   <button (click)="useLanguage('en')">English!</button>
   <button (click)="useLanguage('pt-BR')">Português!</button>

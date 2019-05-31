@@ -2,17 +2,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
-import { RouterModule } from '@angular/router';
-import { AuthService } from './core/guard/auth.service';
-import { AuthGuard} from './core/guard/auth.guard';
 
-// import ngx-translate and the http loader
+// App Configurations
+import { environment } from '../environments/environment';
+
+// Import AngularFire Modules
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+// import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
+// Import ngx-translate and the http loader
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+
+// Import local Project
+import { AuthService } from './shared/guard/auth.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +31,10 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    RouterModule,
+
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
 
     // configure the imports
     HttpClientModule,
@@ -36,8 +48,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 
   ],
   providers: [
-    AuthService,
-    AuthGuard
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

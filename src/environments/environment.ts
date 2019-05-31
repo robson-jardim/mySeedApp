@@ -3,8 +3,20 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+
+  firebaseConfig: {
+    apiKey: 'AIzaSyChBm5-CirVpZZy1x71kloEfM_5iedpR1Q',
+    authDomain: 'ninacheesecakeapp.firebaseapp.com',
+    databaseURL: 'https://ninacheesecakeapp.firebaseio.com',
+    projectId: 'ninacheesecakeapp',
+    storageBucket: 'ninacheesecakeapp.appspot.com',
+    messagingSenderId: '892323237777',
+    appId: '1:892323237777:web:4229cbc10cb4713a'
+  }
 };
+
+// 2. Add your credentials from step 1
 
 /*
  * For easier debugging in development mode, you can import the following file
