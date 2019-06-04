@@ -1,3 +1,52 @@
-<p>
-  login works!
-</p>
+<div>
+  <div>
+    <div >
+      <h3>{{'auth.login.SignIn' | translate}}</h3>
+
+      <div>
+        <input type="text" 
+               placeholder="{{'auth.login.placeholder.Username' | translate }}" 
+               #userName 
+               required>
+      </div>
+
+      <div>
+        <input type="password" 
+               placeholder="{{ 'auth.login.placeholder.Password' | translate }}" 
+               #userPassword 
+               required>
+      </div>
+
+      <div>
+        <input type="button" 
+               value="{{ 'auth.login.button.login' | translate }}" 
+               (click)="authService.SignIn(userName.value, userPassword.value)">
+      </div>
+
+      <div>
+        <span>{{ 'auth.login.span.Or' | translate}}</span>
+      </div>
+
+      <div>
+        <button type="button" 
+                (click)="authService.GoogleAuth()">
+                {{ 'auth.login.button.loginWithGoogleAccount' | translate}}
+        </button>
+      </div>
+
+      <div>
+        <span routerLink="/forgot-password">{{ 'auth.login.link.forgotPassword' | translate}}</span>
+      </div>
+    </div>
+
+    <div>
+      <span>
+        {{ 'auth.login.span.dontHaveAnAccount' | translate}}
+        <span class="redirect" routerLink="/register-user">
+          {{ 'auth.login.link.SignUp' | translate}} 
+        </span>
+      </span>
+    </div>
+
+  </div>
+</div>

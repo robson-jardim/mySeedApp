@@ -1,3 +1,50 @@
-<p>
-  register works!
-</p>
+<div>
+  <div>
+    <div>
+      <h3>{{'auth.register.text.title' | translate}}</h3>
+
+      <div>
+        <input type="email" 
+               placeholder="{{'auth.register.placeholder.email' | translate}}" 
+               #userEmail 
+               required>
+      </div>
+
+      <div>
+        <input type="password" 
+               placeholder="{{'auth.register.placeholder.password' | translate}}" 
+               #userPwd 
+               required>
+      </div>
+
+      <div>
+        <input type="button" 
+               class="btn btnPrimary" 
+               value="{{'auth.register.button.SignUp' | translate}}" 
+               (click)="authService.SignUp(userEmail.value, userPwd.value)">
+      </div>
+
+      <div>
+        <span>{{'auth.register.text.Or' | translate}}</span>
+      </div>
+
+      <!-- Continue with Google -->
+      <div>
+        <button type="button" 
+                (click)="authService.GoogleAuth()">
+                {{'auth.register.button.RegisterWithGoogleAccount' | translate}}
+        </button>
+      </div>
+      
+    </div>
+
+    <div>
+      <span>
+        {{'auth.register.text.AlreadyHaveAnAccount' | translate}} 
+        <span class="redirect" routerLink="/login">
+          {{'auth.register.link.GoBackToLogin' | translate}}
+        </span>
+      </span>
+    </div>
+  </div>
+</div>

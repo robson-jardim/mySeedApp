@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../../../shared/guard/auth.service';
+import {TranslateService} from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-forgot',
@@ -7,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForgotComponent implements OnInit {
 
-  constructor() { }
+  constructor(public authService: AuthService,
+              private translate: TranslateService) { }
 
   ngOnInit() {
   }

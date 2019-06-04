@@ -13,7 +13,13 @@ export const environment = {
     storageBucket: 'ninacheesecakeapp.appspot.com',
     messagingSenderId: '892323237777',
     appId: '1:892323237777:web:4229cbc10cb4713a'
+  },
+
+  appConfig: {
+    AnonymousLogin: 'true',
+    setDefaultLang: 'pt-BR'
   }
+
 };
 
 // 2. Add your credentials from step 1

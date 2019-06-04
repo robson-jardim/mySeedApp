@@ -1,5 +1,38 @@
 {
 	"core": {
 		"AppName": "Minha App de Exemplo"
+	},
+
+	"auth.login": {
+		"SignIn": "Entrar",
+		"placeholder.Username": "Usuário",
+		"placeholder.Password": "Senha",
+		"button.login": "Entrar",
+		"span.Or": "Ou",
+		"button.loginWithGoogleAccount": "Entrar com Google",
+		"link.forgotPassword": "Esqueu a senha",
+		"span.dontHaveAnAccount": "Não tem usuário?",
+		"link.SignUp": "Cadaastre-se"
+	},
+
+	"auth.forgot" : {
+		"text.title" : "Esqueceu sua senha?",
+		"text.instructions" : "Favor infromar seu e-mail para solicitar uma nova senha.",
+		"email" : "e-mail",
+		"button.reset" : "Receber nova senha",
+		"span.goBack": "Deseja voltar para a ",
+		"link.goBack": "Entrada?"
+	},
+
+	"auth.register" : {
+		"text.title" : "Cadastre-se",
+		"placeholder.email": "e-mail",
+		"placeholder.passwrod": "Senha",
+		"button.SignUp" : "Registrar",
+		"text.Or" : "Ou",
+		"button.RegisterWithGoogleAccount" : "Entre com sua conta do Google",
+		"text.AlreadyHaveAnAccount": "Já é cadastrado? Então vá para a ",
+		"link.GoBackToLogin": "Entrada"
 	}
+
 }

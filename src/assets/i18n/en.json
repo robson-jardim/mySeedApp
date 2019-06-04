@@ -1,5 +1,38 @@
 {
 	"core": {
 		"AppName": "My Seed App"
+	},
+
+	"auth.login": {
+		"SignIn": "Sign In",
+		"placeholder.Username": "Username",
+		"placeholder.Password": "Password",
+		"button.login": "Login",
+		"span.Or": "Or",
+		"button.loginWithGoogleAccount": "Login with Google Account",
+		"link.forgotPassword": "Forgot Passaword",
+		"span.dontHaveAnAccount": "Don't have an account?",
+		"link.SignUp": "Sign Up"
+	},
+
+	"auth.forgot" : {
+		"text.title" : "Reset Password",
+		"text.instructions" : "Please enter your email address to request a password reset.",
+		"email" : "e-mail",
+		"button.reset" : "Reset my password",
+		"span.goBack": "Go back to ",
+		"link.goBack": "Login?"
+	},
+
+	"auth.register" : {
+		"text.title" : "Register a new user",
+		"placeholder.email": "e-mail",
+		"placeholder.passwrod": "Password",
+		"button.SignUp" : "Sign Up",
+		"text.Or" : "Or",
+		"button.RegisterWithGoogleAccount" : "Enter with Google Account",
+		"text.AlreadyHaveAnAccount": "Already have a account? ",
+		"link.GoBackToLogin": "Login"
 	}
+
 }

@@ -7,7 +7,6 @@ import {TranslateService} from '@ngx-translate/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'mySeedApp';
 
   constructor(private translate: TranslateService) {
     translate.setDefaultLang('en');
