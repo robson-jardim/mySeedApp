@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
+import { LayoutModule } from './core/layout/layout.module'
+
 // App Configurations
 import { environment } from '../environments/environment';
 
@@ -22,6 +24,9 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 // Import local Project
 import { AuthService } from './shared/guard/auth.service';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -44,9 +49,12 @@ import { AuthService } from './shared/guard/auth.service';
             useFactory: HttpLoaderFactory,
             deps: [HttpClient]
         }
-    })
+    }),
+    BrowserAnimationsModule,
+    LayoutModule,
 
   ],
+
   providers: [
     AuthService
   ],

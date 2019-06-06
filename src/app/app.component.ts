@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
+import {MediaMatcher} from '@angular/cdk/layout';
+import { LayoutModule } from './core/layout/layout.module'
+
+
 
 @Component({
   selector: 'app-root',

@@ -1,20 +1,5 @@
-
-<div style="text-align:center">
-  
-  <nav>
-    <a routerLink="login">Entrar</a> | 
-    <a routerLink="register-user">Novo usuário</a> | 
-    <a routerLink="user-profile">Perfil</a>
-  </nav>
-
-  <h1>
-    {{'core.AppName' | translate}}
-  </h1>
-</div>
-
-<div style="text-align:center">
-  <button (click)="useLanguage('en')">English!</button>
-  <button (click)="useLanguage('pt-BR')">Português!</button>
-</div>
-
+<app-header></app-header>
+<h1>Teste</h1>
+<app-sidebar>SideBar</app-sidebar>
+<!-- routes will be rendered here -->
 <router-outlet></router-outlet>
